@@ -35,6 +35,15 @@ class Usermodel{
             })
         })
     }
+    static async edit(id,name,email,password){
+        return new Promise(resolve=>{
+            db.query("update users set fullname=? ,email=?,password=? where id = ?",[name,email,password,id],(err,results)=>{
+                if(!err)
+                resolve(results)
+            })
+       
+        })
+    }
 }
 
 module.exports = Usermodel

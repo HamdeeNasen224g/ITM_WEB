@@ -27,10 +27,20 @@ class UserController{
              res.send("delete done");
             else
              res.send("delete failed");
-        }
-        
-        
+        }    
     }
+    static async updateuser(req,res){
+        const id = req.body.id;
+        const newname = req.body.name;
+        const newemail = req.body.email;
+        const newPassword = req.body.password;
+        var x = await Usermodel.edit(id,newname,newemail,newPassword);
+        if(x)
+        res.send("data edited successful")
+        else
+        res.send("data edited failed")
+    }
+    
 }
 
 module.exports = UserController

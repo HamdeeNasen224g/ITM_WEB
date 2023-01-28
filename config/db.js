@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const db = mysql.createPool({
     host:'sql12.freesqldatabase.com',
     user:'sql12593903',
-    password:'3306',
+    password:'UpDj4QnW2m',
     database:'sql12593903',
     port:'3306'
 })
