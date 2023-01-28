@@ -30,6 +30,9 @@ class UserController{
         }    
     }
     static async updateuser(req,res){
+
+        console.log("edit user ")
+
         const id = req.body.id;
         const newname = req.body.name;
         const newemail = req.body.email;
