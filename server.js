@@ -8,7 +8,7 @@ const port = process.env.port || 3005;
 app.use(express.json());
 
 app.set('view engine','ejs')
-
+app.set("views", "views")
 app.use(route)
 
 //Route

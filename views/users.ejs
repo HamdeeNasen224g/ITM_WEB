@@ -7,6 +7,22 @@
     <title></title>
 </head>
 <body>
-    <h2>Users</h2>
+    <a href="/"><h1>Home</h1></a>
+    <table class="table">
+        <thead>
+<th>id</th>
+<th>Fullname</th>
+<th>E-mail</th>
+<th>Password</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </body>
+<script>
+fetch('/alluser')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+</script>
 </html>

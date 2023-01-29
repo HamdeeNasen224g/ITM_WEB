@@ -3,11 +3,12 @@ const user = require('../models/User')
 const {validationResult} = require("express-validator")
 class UserController{
 
-    static async geralluser(req,res){
+    static async getalluser(req,res){
         var results = await Usermodel.getusers();
         if(results)
+        console.log(results)
         res.send(results)
-        
+   
     }
 
     static async addnewusers(req,res){
