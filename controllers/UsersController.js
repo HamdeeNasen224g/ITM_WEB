@@ -7,6 +7,7 @@ class UserController{
         var results = await Usermodel.getusers();
         if(results)
         res.send(results)
+        
     }
 
     static async addnewusers(req,res){

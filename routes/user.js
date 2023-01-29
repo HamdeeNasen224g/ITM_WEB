@@ -4,5 +4,5 @@ const router = require('express').Router();
 
 // router.get('/',(req, res, next) => {res.send("Home");});
 router.get('/', (req, res,next) => {
-    res.send('index')
+    res.render('/views/index.ejs')
   })
