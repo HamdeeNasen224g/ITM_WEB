@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.use(route)
 
+
 // //mysql connection
 // const connection = mysql.createConnection({
 //     host:'127.0.0.1',
