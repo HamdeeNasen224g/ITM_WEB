@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/head') %>
+<body>
+    <a href="/"><h1>Home</h1></a>
+    <br/>
+    <div class="container-fluid">
+        <table class="table-primary container">
+            <thead class="table-hover container-md-3">
+    <th scope="col">id</th>
+    <th scope="col">Fullname</th>
+    <th scope="col">E-mail</th>
+    <th scope="col">Password</th>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script>
+fetch('/alluser')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+
+</script>
+</html>

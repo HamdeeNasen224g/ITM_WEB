@@ -4,10 +4,12 @@ const mysql = require("mysql");
 const mydb = require('./config/db')
 const route = require("./routes/router")
 const app = express();
+const port = process.env.port || 3005;
 app.use(express.json());
 
+app.set('view engine','ejs')
+app.set("views", "views")
 app.use(route)
-
 
 // //mysql connection
 // const connection = mysql.createConnection({
@@ -121,4 +123,4 @@ app.delete("/delete/:email", async (req, res) => {
         return res.status(500).send();
     }
 })
-app.listen(3000,()=> console.log('Server is running on port 3000'));
+app.listen(port,()=> console.log('Server is running on port '+port));
